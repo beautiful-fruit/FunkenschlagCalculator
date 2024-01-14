@@ -1,0 +1,19 @@
+@import url(./config/color.scss);
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  color: var(--color);
+  background-color: var(--bg-color);
+  h4,
+  h5 {
+    margin: 0;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 1.75rem;
+  }
+}

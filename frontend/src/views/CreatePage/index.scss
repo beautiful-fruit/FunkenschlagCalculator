@@ -1,0 +1,38 @@
+#createPage {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    gap: 0.5em;
+    user-select: none;
+    .column {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        color: var(--s-color);
+    }
+    .selectMap {
+        .text {
+            text-align: center;
+            min-width: calc(0.75em * (var(--text-length)));
+        }
+    }
+    .resource, .initCoin {
+        .label {
+            margin-right: auto;
+        }
+        .text {
+            min-width: 2em;
+            text-align: center;
+        }
+    }
+    button {
+        height: 2em;
+        color: var(--color);
+        background-color: var(--bg-accept-btn);
+        border: none;
+        border-radius: 0.5em;
+        font-size: inherit;
+        outline: none;
+    }
+}

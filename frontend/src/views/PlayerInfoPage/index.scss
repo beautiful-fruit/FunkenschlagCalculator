@@ -1,0 +1,50 @@
+#playerInfoPage {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5em;
+    h4 {
+        margin: 0;
+        color: var(--color);
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .block {
+        padding: 1rem;
+        border-radius: 1rem;
+        color: var(--c-color);
+        background-color: var(--bg-c-color);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        font-size: 1.5rem;
+        gap: 0.5em;
+        > h5 {
+            margin: 0;
+            font-weight: 400;
+            font-size: inherit;
+        }
+        > .column {
+            display: flex;
+            > div:has(.ms) {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                width: 100%;
+            }
+        }
+        .coal {
+            color: #855B32;
+        }
+        .oil {
+            color: #332340;
+        }
+        .uranium {
+            color: #C22;
+        }
+        .trash {
+            color: #CA0;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+#selectColor {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    user-select: none;
+    .colors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem 0;
+        margin: 1rem 0;
+        > div {
+            padding: 0.25em 0.5em;
+            border-radius: 0.25em;
+            width: calc(50% - 1.25em);
+            height: min(15vw, 10vh);
+            line-height: min(15vw, 10vh);
+            font-size: min(7.5vw, 5vh);
+            text-align: center;
+            transition: color 0.5s, background-color 0.5s;
+            box-shadow: 0.15rem 0.15rem 0.3rem -0.15rem #000;
+        }
+        > div.black {
+            --local-color: var(--team-black);
+        }
+        > div.purple {
+            --local-color: var(--team-purple);
+        }
+        > div.yellow {
+            --local-color: var(--team-yellow);
+        }
+        > div.red {
+            --local-color: var(--team-red);
+        }
+        > div.blue {
+            --local-color: var(--team-blue);
+        }
+        > div.green {
+            --local-color: var(--team-green);
+        }
+        > div {
+            color: var(--local-color);
+            background-color: var(--color);
+        }
+        > div[data-selected=true] {
+            color: var(--s-color);
+            background-color: var(--bg-c-color);
+        }
+        > div[data-player=true] {
+            color: var(--color);
+            background-color: var(--local-color);
+        }
+    }
+    button {
+        width: 100%;
+        font-size: inherit;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        color: inherit;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0.15rem 0.15rem 0.3rem -0.15rem #000;
+        transition: background-color 0.5s;
+    }
+    button[data-ready=false] {
+        background-color: var(--bg-accept-btn);
+    }
+    button[data-ready=true] {
+        background-color: var(--bg-cancel-btn);
+    }
+    button:disabled {
+        color: var(--s-color);
+        background-color: var(--bg-c-color);
+    }
+}
